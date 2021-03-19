@@ -11,7 +11,7 @@ import br.com.jeferson.simian.api.services.DnaService;
 
 @Service
 public class DnaServiceImpl implements DnaService{
-
+	private static final String VALID_CHARS = "A|T|C|G";
 	@Autowired
 	DnaRepository repository;
 	
@@ -28,7 +28,7 @@ public class DnaServiceImpl implements DnaService{
 	}
 
 	@Override
-	public Dna addDna(Dna dna) {
+	public Dna addDna(Dna dna, Boolean isSimian) {
 		return repository.save(null);
 	}
 

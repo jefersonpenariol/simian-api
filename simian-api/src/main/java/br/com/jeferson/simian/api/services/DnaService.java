@@ -8,5 +8,5 @@ public interface DnaService {
 	
 	StatsDto getStats();
 	
-	Dna addDna(Dna dna);
+	Dna addDna(Dna dna, Boolean isSimian);
 }

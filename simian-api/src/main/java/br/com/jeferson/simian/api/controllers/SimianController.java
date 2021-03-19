@@ -20,7 +20,10 @@ public class SimianController {
 	
 	@PostMapping("/simian")
 	public ResponseEntity<Dna> isSimian(@RequestBody Dna dna){
-		if(service.isSimian(dna.getDnaId())) {
+		Boolean isSimian = service.isSimian(dna.getDnaId());
+		service.addDna(dna, isSimian);
+		
+		if(isSimian) {
 			return ResponseEntity.status(HttpStatus.OK).build();
 		}else {
 			return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
