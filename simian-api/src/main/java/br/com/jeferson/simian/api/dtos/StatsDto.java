@@ -14,4 +14,30 @@ public class StatsDto {
 	
 	@JsonProperty("ratio")
 	private BigDecimal ratio;
+
+	public int getCountMutantDna() {
+		return countMutantDna;
+	}
+
+	public void setCountMutantDna(int countMutantDna) {
+		this.countMutantDna = countMutantDna;
+	}
+
+	public int getCountHumanDna() {
+		return countHumanDna;
+	}
+
+	public void setCountHumanDna(int countHumanDna) {
+		this.countHumanDna = countHumanDna;
+	}
+
+	public BigDecimal getRatio() {
+		return ratio;
+	}
+
+	public void setRatio(BigDecimal ratio) {
+		this.ratio = ratio;
+	}
+	
+	
 }

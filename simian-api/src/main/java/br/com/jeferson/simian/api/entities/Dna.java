@@ -1,6 +1,7 @@
 package br.com.jeferson.simian.api.entities;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -8,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import br.com.jeferson.simian.api.enums.DnaTypeEnum;
 
+@Entity
 @Table(name = "DNA")
 public class Dna {
 	
